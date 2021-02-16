@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "G0/ltVWx2aG9SBAOxWxWejtFqu0Ww5z0X0+zzfseT4FT/nvy0yPQDZM/1JKrjpVYlgKKyVnzFAn8wI22p9dRag==",
+  "success": true,
+  "projectFilePath": "D:\\NET 5 Devlopment\\apitoconsumidentityserver\\src\\restapisample\\WeatherMVC\\WeatherMVC.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\nestdev\\.nuget\\packages\\identitymodel\\5.0.1\\identitymodel.5.0.1.nupkg.sha512",
+    "C:\\Users\\nestdev\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512",
+    "C:\\Users\\nestdev\\.nuget\\packages\\system.text.encodings.web\\5.0.0\\system.text.encodings.web.5.0.0.nupkg.sha512",
+    "C:\\Users\\nestdev\\.nuget\\packages\\system.text.json\\5.0.0\\system.text.json.5.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}
