@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.IdentityModel.Logging;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -24,7 +25,35 @@ namespace WeatherMVC
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            IdentityModelEventSource.ShowPII = true;
             services.AddControllersWithViews();
+            //add authentication to use is4
+            services.AddAuthentication(options =>
+            {
+                options.DefaultScheme = "cookie";
+                options.DefaultChallengeScheme = "oidc";
+            })
+                .AddCookie("cookie")
+            .AddOpenIdConnect("oidc", options =>
+            {
+                options.Authority = Configuration["InteractiveServiceSettings:AuthorityUrl"];
+                options.ClientId = Configuration["InteractiveServiceSettings:ClientId"];
+                options.ClientSecret = Configuration["InteractiveServiceSettings:ClientSecret"];
+
+                options.ResponseType = "code";
+                options.UsePkce = true;
+                options.ResponseMode = "query";
+
+                options.Scope.Add(Configuration["InteractiveServiceSettings:Scopes:0"]);
+                options.SaveTokens = true;
+
+                //options.Scope.Add("weatherapi");
+                //options.Scope.Add("profile");
+                //options.GetClaimsFromUserInfoEndpoint = true;
+
+                //options.Scope.Add("offline_access");
+            });
+
             services.Configure<IdentityServerSettings>(Configuration.GetSection("IdentityServerSettings"));
             services.AddSingleton<ITokenService, TokenService>();
         }
@@ -47,6 +76,7 @@ namespace WeatherMVC
 
             app.UseRouting();
 
+            app.UseAuthentication();
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>

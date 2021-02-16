@@ -10,7 +10,6 @@ D:\NET 5 Devlopment\apitoconsumidentityserver\src\restapisample\WeatherMVC\bin\D
 D:\NET 5 Devlopment\apitoconsumidentityserver\src\restapisample\WeatherMVC\bin\Debug\net5.0\WeatherMVC.Views.dll
 D:\NET 5 Devlopment\apitoconsumidentityserver\src\restapisample\WeatherMVC\bin\Debug\net5.0\WeatherMVC.Views.pdb
 D:\NET 5 Devlopment\apitoconsumidentityserver\src\restapisample\WeatherMVC\bin\Debug\net5.0\Newtonsoft.Json.dll
-D:\NET 5 Devlopment\apitoconsumidentityserver\src\restapisample\WeatherMVC\obj\Debug\net5.0\WeatherMVC.csprojAssemblyReference.cache
 D:\NET 5 Devlopment\apitoconsumidentityserver\src\restapisample\WeatherMVC\obj\Debug\net5.0\WeatherMVC.GeneratedMSBuildEditorConfig.editorconfig
 D:\NET 5 Devlopment\apitoconsumidentityserver\src\restapisample\WeatherMVC\obj\Debug\net5.0\WeatherMVC.AssemblyInfoInputs.cache
 D:\NET 5 Devlopment\apitoconsumidentityserver\src\restapisample\WeatherMVC\obj\Debug\net5.0\WeatherMVC.AssemblyInfo.cs
@@ -41,3 +40,11 @@ D:\NET 5 Devlopment\apitoconsumidentityserver\src\restapisample\WeatherMVC\obj\D
 D:\NET 5 Devlopment\apitoconsumidentityserver\src\restapisample\WeatherMVC\obj\Debug\net5.0\WeatherMVC.pdb
 D:\NET 5 Devlopment\apitoconsumidentityserver\src\restapisample\WeatherMVC\obj\Debug\net5.0\WeatherMVC.genruntimeconfig.cache
 D:\NET 5 Devlopment\apitoconsumidentityserver\src\restapisample\WeatherMVC\bin\Debug\net5.0\IdentityModel.dll
+D:\NET 5 Devlopment\apitoconsumidentityserver\src\restapisample\WeatherMVC\bin\Debug\net5.0\Microsoft.AspNetCore.Authentication.OpenIdConnect.dll
+D:\NET 5 Devlopment\apitoconsumidentityserver\src\restapisample\WeatherMVC\bin\Debug\net5.0\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\NET 5 Devlopment\apitoconsumidentityserver\src\restapisample\WeatherMVC\bin\Debug\net5.0\Microsoft.IdentityModel.Logging.dll
+D:\NET 5 Devlopment\apitoconsumidentityserver\src\restapisample\WeatherMVC\bin\Debug\net5.0\Microsoft.IdentityModel.Protocols.dll
+D:\NET 5 Devlopment\apitoconsumidentityserver\src\restapisample\WeatherMVC\bin\Debug\net5.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+D:\NET 5 Devlopment\apitoconsumidentityserver\src\restapisample\WeatherMVC\bin\Debug\net5.0\Microsoft.IdentityModel.Tokens.dll
+D:\NET 5 Devlopment\apitoconsumidentityserver\src\restapisample\WeatherMVC\bin\Debug\net5.0\System.IdentityModel.Tokens.Jwt.dll
+D:\NET 5 Devlopment\apitoconsumidentityserver\src\restapisample\WeatherMVC\obj\Debug\net5.0\WeatherMVC.csprojAssemblyReference.cache

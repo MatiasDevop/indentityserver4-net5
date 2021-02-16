@@ -1,4 +1,5 @@
 ﻿using IdentityModel.Client;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
@@ -34,6 +35,8 @@ namespace WeatherMVC.Controllers
         {
             return View();
         }
+
+        [Authorize]
         public async Task<IActionResult> Weather()
         {
             var data = new List<WeatherData>();
