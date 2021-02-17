@@ -39,7 +39,7 @@ namespace restapisample
                   {
                       config.Authority = "https://localhost:5443/";
 
-                      config.Audience = "weatherapi";
+                      config.Audience = "weatherapi.read";
                       config.TokenValidationParameters = new TokenValidationParameters
                       {
                           ValidateAudience = false
@@ -52,23 +52,14 @@ namespace restapisample
                 options.AddPolicy("ApiScope", policy =>
                 {
                     policy.RequireAuthenticatedUser();
-                    policy.RequireClaim("scope", "weatherapi");
+                    policy.RequireClaim("scope", "weatherapi.read");
                 });
             });
-            //services.AddAuthentication("Bearer")
-            //     .AddIdentityServerAuthentication("Bearer", options =>
-            //     {
-            //         options.ApiName = "weatherapi";
-            //         options.Authority = "https://localhost:5443";
 
-
-            //         options.RequireHttpsMetadata = false;
-
-            //     });
-
-
-
-
+            services.AddCors(confg =>
+                confg.AddPolicy("AllowAll", p => p.AllowAnyOrigin()
+                .AllowAnyMethod()
+                .AllowAnyHeader()));
 
             services.AddControllers();
             services.AddSwaggerGen(c =>
@@ -87,6 +78,8 @@ namespace restapisample
                 app.UseSwagger();
                 app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "restapisample v1"));
             }
+
+            app.UseCors("AllowAll");
 
             app.UseHttpsRedirection();
 

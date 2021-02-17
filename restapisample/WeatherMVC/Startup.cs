@@ -46,12 +46,6 @@ namespace WeatherMVC
 
                 options.Scope.Add(Configuration["InteractiveServiceSettings:Scopes:0"]);
                 options.SaveTokens = true;
-
-                //options.Scope.Add("weatherapi");
-                //options.Scope.Add("profile");
-                //options.GetClaimsFromUserInfoEndpoint = true;
-
-                //options.Scope.Add("offline_access");
             });
 
             services.Configure<IdentityServerSettings>(Configuration.GetSection("IdentityServerSettings"));
